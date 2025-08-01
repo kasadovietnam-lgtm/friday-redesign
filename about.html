@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | FRIDAY ENTERTAINMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="https://friday-vj.com/data/images/logo_01.png" alt="FRIDAY ENTERTAINMENT">
+            </a>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html#vision">Vision<br><span>ビジョン</span></a></li>
+                    <li><a href="about.html">About us<br><span>会社概要</span></a></li>
+                    <li><a href="product.html">Dr.Amino's Power Life<br><span>アミノ酸サプリメント</span></a></li>
+                    <li><a href="index.html#service">Services<br><span>サービス</span></a></li>
+                    <li><a href="index.html#contact">Contact<br><span>お問い合わせ</span></a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero hero--sub">
+        <img class="hero__image" src="https://friday-vj.com/data/images/top/img_mv_pc.gif" alt="会社概要">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1>会社概要</h1>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title"><span>About us</span>会社概要</h2>
+                <div class="section__content">
+                    <dl class="definition-list">
+                        <div>
+                            <dt>会社名</dt>
+                            <dd>株式会社 フライデー</dd>
+                        </div>
+                        <div>
+                            <dt>代表者名</dt>
+                            <dd>笠戸公文</dd>
+                        </div>
+                        <div>
+                            <dt>所在地</dt>
+                            <dd>東京都港区浜松町2丁目2番15号2階</dd>
+                        </div>
+                        <div>
+                            <dt>ベトナムオフィス</dt>
+                            <dd>3rd Floor, Copac Square Building, 12 Ton Dan, Ward 13, District 4 Ho Chi Minh City, Vietnam</dd>
+                        </div>
+                        <div>
+                            <dt>事業内容</dt>
+                            <dd>
+                                <ol>
+                                    <li>健康食品、健康補助食品、サプリメント、食料品、化粧品、日用雑貨、装飾雑貨、服飾雑貨、衣料品等の企画、開発、製造、販売及び輸出入</li>
+                                    <li>まちづくり、むらおこし等に係る企画、調査、立案及びコンサルティング並びに地方公共団体及び関連経済団体等のPR活動支援業務</li>
+                                    <li>留学及び旅行に関する情報提供サービス及びコンサルティング</li>
+                                    <li>販売促進用ノベルティの企画、販売</li>
+                                    <li>各種イベントの企画、運営及びコンサルティング</li>
+                                    <li>映像制作および機材の販売、賃貸</li>
+                                    <li>広告代理業務</li>
+                                    <li>企業のマーケティング活動に係る企画立案、コンサルティング及びアウトソーシング業務</li>
+                                    <li>コンピューターシステム機器及びソフトウェアの開発、販売</li>
+                                    <li>印刷業</li>
+                                </ol>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>創立</dt>
+                            <dd>2018年9月5日</dd>
+                        </div>
+                        <div>
+                            <dt>資本金</dt>
+                            <dd>300万円</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd><a href="https://friday-vj.com">https://friday-vj.com</a></dd>
+                        </div>
+                        <div>
+                            <dt>パートナー企業</dt>
+                            <dd>
+                                <a href="https://kilala.com.vn" target="_blank" rel="noopener">キララ コミュニケーション</a> / 
+                                <a href="https://sunflowervn.com" target="_blank" rel="noopener">サンフラワー コマース</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__info">
+                東京オフィス：東京都港区浜松町2丁目2番15号2階<br>
+                ホーチミンオフィス：3rd Floor, Copac Square Building, 12 Ton Dan, Ward 13, District 4 Ho Chi Minh City, Vietnam
+            </p>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="https://friday-vj.com" target="_blank" rel="noopener">FRIDAY</a></li>
+                    <li><a href="https://kilala.com.vn" target="_blank" rel="noopener">KILALA</a></li>
+                    <li><a href="https://sunflowervn.com" target="_blank" rel="noopener">SUNFLOWER</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+    const menuButton = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuButton.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        menuButton.classList.toggle('open');
+    });
+    </script>
+</body>
+</html>

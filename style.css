@@ -1,0 +1,451 @@
+/* 共通スタイル */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: #222;
+    background-color: #F7F9F7;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #2E7D32;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #1B5E20;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #fff;
+    border-bottom: 2px solid #66BB6A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+.logo img {
+    height: 40px;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav li a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+.nav li a span {
+    font-size: 0.7rem;
+    color: #555;
+}
+.nav li a:hover {
+    border-color: #2E7D32;
+}
+
+/* ハンバーガー */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.menu-toggle span {
+    height: 3px;
+    background: #2E7D32;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ヒーローセクション */
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 125, 50, 0.35);
+    z-index: -1;
+}
+.hero__content h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.scroll-indicator {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    transition: border-color 0.3s ease;
+}
+.scroll-indicator:hover {
+    border-color: #66BB6A;
+}
+
+/* サブヒーロー（各ページ用） */
+.hero--sub {
+    height: 40vh;
+    min-height: 260px;
+}
+
+/* セクション */
+.section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+.section--alt {
+    background-color: #EEF7EE;
+}
+.section__title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.section__title span {
+    display: block;
+    font-size: 0.8rem;
+    color: #66BB6A;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.05em;
+}
+
+.section__content p {
+    margin-bottom: 1rem;
+}
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+.list li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.7rem;
+}
+.list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #66BB6A;
+}
+.highlight {
+    font-weight: 600;
+    color: #2E7D32;
+    margin-top: 1rem;
+}
+
+/* 定義リスト */
+.definition-list div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.definition-list dt {
+    width: 25%;
+    font-weight: 600;
+    color: #2E7D32;
+}
+.definition-list dd {
+    width: 75%;
+    margin: 0;
+}
+
+/* カードレイアウト */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.card h3 {
+    font-size: 1.1rem;
+    margin: 1rem;
+    color: #2E7D32;
+}
+.card p {
+    margin: 0 1rem 1.5rem;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+/* お問い合わせフォーム */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.form-group--captcha {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.btn {
+    display: inline-block;
+    background-color: #66BB6A;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #2E7D32;
+}
+
+/* フッター */
+.footer {
+    background-color: #EEF7EE;
+    padding: 2rem 0;
+}
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__info {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+.footer__nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+.footer__nav a {
+    font-size: 0.8rem;
+}
+
+/* 商品ページ特有のスタイル */
+.lead {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.series-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.series-item {
+    background-color: #fff;
+    border: 2px solid #66BB6A;
+    border-radius: 30px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    color: #2E7D32;
+    transition: background-color 0.3s ease;
+}
+.series-item:hover {
+    background-color: #66BB6A;
+    color: #fff;
+}
+.product-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.product-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #2E7D32;
+    text-align: center;
+}
+.product-block img {
+    flex: 1 1 240px;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.product-info {
+    flex: 2 1 350px;
+}
+.product-info h4 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: #2E7D32;
+}
+.product-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+.product-info ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+.product-info ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #66BB6A;
+    border-radius: 50%;
+}
+.product-info .small {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 0;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    .nav.open ul {
+        transform: translateX(0);
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav ul li {
+        margin-bottom: 1rem;
+    }
+    .header__inner {
+        position: relative;
+    }
+    .definition-list dt {
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+    .definition-list dd {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .product-block {
+        flex-direction: column;
+    }
+    .product-block img, .product-info {
+        flex: none;
+        width: 100%;
+    }
+    .hero__content h1 {
+        font-size: 1.5rem;
+    }
+    .section__title {
+        font-size: 1.4rem;
+    }
+}
